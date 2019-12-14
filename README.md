@@ -32,7 +32,7 @@
 - Cơ sở dữ liệu: sơ đồ khối hoạt động, sơ đồ thực thể liên kết, mô tả các bảng quan hệ.
 - Triển khai chương trình: thiết kế giao diện cho website.
 
-<h2> HƯỚNG PHÁT TRIỂN THẾM CHO ỨNG DỤNG</h2>
+<h2> HƯỚNG PHÁT TRIỂN THÊM CHO ỨNG DỤNG</h2>
 
 - Thêm một số chức năng cho để đáp ứng với yêu cầu của người dùng.
 - Cải thiện giao diện đẹp hơn phù hợp với người dùng.
