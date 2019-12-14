@@ -41,4 +41,4 @@
 <h2> TÁC GIẢ</h2>
 
 - Phạm Công Danh
-- Trần Vính Khang
+- Trần Vĩnh Khang
