@@ -1,0 +1,164 @@
+.truyenmoi .container{
+	margin-top: 20px
+}
+.truyenmoi .container .block{
+	width: 1200px;
+}
+.truyenmoi .container .block ul li{
+	float: left;
+	padding: 20px;
+	list-style-type: none;
+}
+.truyenmoi .container .block .block_sidebar a {
+	text-decoration: none;
+}
+.block02{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+    color: #4a4a4a;
+    font-weight: 400;
+    line-height: 1.5;
+    font-family: Quicksand,sans-serif;
+    font-size: 90%!important;
+    box-sizing: inherit;
+    clear: both;
+    padding-bottom: 30px;
+}
+.title{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+    font-family: Quicksand,sans-serif;
+    box-sizing: inherit;
+    word-break: break-word;
+    color: #363636;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.125;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+}
+.story-detail-title{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+    word-break: break-word;
+    box-sizing: inherit;
+    font-family: inherit;
+    line-height: 1.1;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    color: #f18121;
+    background: url(../images/story-list-icon06.png) left center no-repeat;
+    font-size: 18px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    background-size: 15px 15px!important;
+    float: left;
+}
+.boxx{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+    font-weight: 400;
+    line-height: 1.5;
+    font-family: Quicksand,sans-serif;
+    font-size: 90%!important;
+    box-sizing: inherit;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 3px rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.1);
+    color: #4a4a4a;
+    display: block;
+    padding: 1.25rem;
+    overflow-y: auto;
+    max-height: 300px;
+}
+.works-chapter-list{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+    font-weight: 400;
+    line-height: 1.5;
+    font-family: Quicksand,sans-serif;
+    font-size: 90%!important;
+    color: #4a4a4a;
+    box-sizing: inherit;
+}
+.works-chapter-item row{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+    font-weight: 400;
+    line-height: 1.5;
+    font-family: Quicksand,sans-serif;
+    font-size: 90%!important;
+    color: #4a4a4a;
+    box-sizing: inherit;
+    margin-right: -15px;
+    margin-left: -15px;
+    border-bottom: 1px solid #eee;
+    padding: 5px 0;
+    text-align: left;
+}
+.block01{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+    color: #4a4a4a;
+    font-weight: 400;
+    line-height: 1.5;
+    font-family: Quicksand,sans-serif;
+    font-size: 90%!important;
+    box-sizing: inherit;
+    width: 100%;
+    float: left;
+    padding-bottom: 30px;
+    position: relative;
+}
+.noidung{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+    font-weight: 400;
+    font-family: Quicksand,sans-serif;
+    font-size: 90%!important;
+    text-align: left;
+    box-sizing: inherit;
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    line-height: 30px;
+    color: #000;
+    padding-bottom: 10px;
+    height: 222.2px;
+}
+.works-chapter-item {
+    font-size: 20px;
+    text-decoration: none;
+}
+.lazy{
+    width: 80%;
+    padding-left: 20%;
+}
+#wrapper .container{
+	background: #ffffff;
+}
+seetion .container{
+	background: #424242;
+}
+#news img{
+	vertical-align: middle;
+	border-radius: 10px;
+}

@@ -2,9 +2,9 @@
     include 'top.php';
 ?>
 
-<section class="container">
+<section class="main-content on">
 <div class="story-see-content">
-    <div class="boxx">
+    <div class="box">
         <div id="path" class="path-top">
             <ol class="breadcrumb" itemscope="" itemtype="http://schema.org/BreadcrumbList">
             </ol>                   

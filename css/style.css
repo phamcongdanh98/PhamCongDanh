@@ -1,0 +1,59 @@
+.container{
+position: relative;
+text-rendering: optimizeLegibility;
+text-size-adjust: 100%;
+color: #4a4a4a;
+font-weight: 400;
+line-height: 1.5;
+font-family: Quicksand,sans-serif;
+font-size: 15px;
+box-sizing: inherit;
+padding-right: 15px;
+padding-left: 15px;
+position: relative;
+width: 1200px;
+max-width: 1200px!important;
+margin: 0 auto;
+}
+.header{
+	padding-top: 17px;
+    padding-bottom: 50px;
+	height: 38px;
+	background: #ffffff
+}
+.logo img{
+	padding-top: 5px;
+	padding-left: 11px
+
+}
+.header button{
+	background: url("../anh/icon-timkiem.png");
+	height: 30px;
+	width: 40px;
+	border: none;
+	position: absolute;
+	top:4px;
+	right: 32px;
+
+}
+.header .form-control{
+	border-radius: 40px;
+}
+.login .btn{
+	border: 1px solid black;
+	border-radius: 40px;
+}
+.navbar{
+background: #f18121;
+margin-bottom: 20px;
+}
+nav{
+	
+	height: 54px;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: #ffffff;
+    font: 15px Quicksand;
+    padding: 10px 15px;
+    text-transform: uppercase;
+}

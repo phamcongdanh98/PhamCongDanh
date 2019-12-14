@@ -4,9 +4,7 @@
 ?>
 
 <div id="wrapper">
-
-            <div class="container">
-                
+            <div id="left">
             <?php
             $sql = "SELECT * FROM TRUYEN WHERE IDTRUYEN=".$_GET['id'];
             
@@ -15,15 +13,12 @@
                     echo"
                     <div id=news>
                         <img src=".$row['ANH']." alt=Li's Product Image>
-                        <a href=view.php?chuong=1>
-                        <button class=btnDTruyen><span>Đọc Truyện</span></button>
-
-                        </a>
-                        <p id=khung>DanhPham</p>
                     <p href=>".$row['NOIDUNG']."</p>
                     <a href=>".$row['TIEUDE']."</a>
                     </div>
-                    
+                    <a href=view.php?chuong=1>
+                    <button class=btnDTruyen><span>Đọc Truyện</span></button>
+                    </a>
             <div class=block02>
             <div class=title>
                 <h2 class=story-detail-title>Danh sách chương</h2>
