@@ -1,2 +1,0 @@
-# PhamCongDanh
-Ma Nguon Mo
