@@ -13,22 +13,19 @@ if (!$connect) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="./css/style1.css"> -->
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/view.css" />
-    <link rel="stylesheet" href="./css/view1.css" />
     <title>Truyện Tranh</title>
 </head>
 <body>
     <div class="header">       
         <div class="container">
             <div class="row ">
-                <div class="col-sm-2 le">
+                <div class="col-sm-2">
                     <div class="logo">
-                        <a href="#"><img src="./anh/logo1.png" alt="áda"></a>
+                        <a href="#"><img src="./anh/logo1.png" alt="img22"></a>
                     </div>
                 </div>
-                <div class="col-sm-7 le">
+                <div class="col-sm-7">
                     <form method="get" action="tim-truyen/">
                         <div class="input-group">
                             <input type="text" name="keyword" class="form-control" placeholder="Tìm truyện...">
@@ -36,7 +33,7 @@ if (!$connect) {
                         <button></button>
                     </form>
                 </div>
-                <div class="col-sm-3 le login">
+                <div class="col-sm-3 login">
                 <a href="#" class="item control btn btn-default mt-15 mb-15">Đăng Nhập/Đăng ký</a>
                 </div>
             </div>
@@ -64,8 +61,17 @@ if (!$connect) {
                 <li class="nav-item">
                     <a class="nav-link" href="#">Thông Tin</a>
                 </li>
-        	</div>
+            </div>
                </ul>
            </div>
         </div>
 </nav>
+<?php
+        $conn = new mysqli('localhost','root','','webtruyen');
+        mysqli_query($conn,'SET NAMES UTF8');
+        // Check connection
+        if(!$conn){
+            die("Kết nối thất bại". mysqli_connect_error($conn));
+        }
+?>
+

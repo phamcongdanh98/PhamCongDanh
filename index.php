@@ -1,109 +1,40 @@
 <?php
     include 'top.php';
 ?>
-<div class="truyentop">       
-        <div class="container">
-        	<h2><a href="">Truyện Hot</a></h2>
-        	<div class="top">
-        	<div class="box">
-        		<a href="#"><div class="imgbx">
-        			<img src="./anh/naruto.jpg">
-        		</div>
-        		<div class="content">
-        			<div>
-        				<h2>tieude1</h2>
-        				<p>Don’t want your columns to simply stack in some grid tiers? Use a combination of different classes for each tier as needed. See the example below for a better idea of how it all works.</p>
-        			</div>
-        		</div></a>
-        	</div>
-        	<div class="box">
-        		<div class="imgbx">
-        			<img src="./anh/onepice.jpg">
-        		</div>
-        		<div class="content">
-        			<div>
-        				<h2>tieude2</h2>
-        				<p>noidung12121212</p>
-        			</div>
-        		</div>
-        	</div>
-        	<div class="box">
-        		<div class="imgbx">
-        			<img src="./anh/naruto.jpg">
-        		</div>
-        		<div class="content">
-        			<div>
-        				<h2>tieude3</h2>
-        				<p>noidung12121212</p>
-        			</div>
-        		</div>
-        	</div>
-          </div>
-        </div> 
-</div>
-<div class="truyenmoi">
-	<div class="container">
-		<div class="block">
-			<div class="block_sidebar">
-				<h3><a href="#">Truyện Mới</a></h3>
-			</div>
-			<div>	
-				<ul>
-					<a href="#"><li>
-						<img src="./anh/naruto.jpg" alt="">
-						<h3>Naruto</h3>
-						<p>tacgia</p>
-					</li></a>
-					<li>
-						<img src="./anh/naruto.jpg" alt="">
-						<h3>Naruto</h3>
-						<p>tacgia</p>
-					</li>
-					<li>
-						<img src="./anh/naruto.jpg" alt="">
-						<h3>Naruto</h3>
-						<p>tacgia</p>
-					</li>
-					<li>
-						<img src="./anh/naruto.jpg" alt="">
-						<h3>Naruto</h3>
-						<p>tacgia</p>
-					</li>
-					<li>
-						<img src="./anh/naruto.jpg" alt="">
-						<h3>Naruto</h3>
-						<p>tacgia</p>
-					</li>
-					<li>
-						<img src="./anh/naruto.jpg" alt="">
-						<h3>Naruto</h3>
-						<p>tacgia</p>
-					</li>
-					<li>
-						<img src="./anh/naruto.jpg" alt="">
-						<h3>Naruto</h3>
-						<p>tacgia</p>
-					</li>
-					<li>
-						<img src="./anh/naruto.jpg" alt="">
-						<h3>Naruto</h3>
-						<p>tacgia</p>
-					</li>
-					<li>
-						<img src="./anh/naruto.jpg" alt="">
-						<h3>Naruto</h3>
-						<p>tacgia</p>
-					</li>
-					<li>
-						<img src="./anh/naruto.jpg" alt="">
-						<h3>Naruto</h3>
-						<p>tacgia</p>
-					</li>
-
-				</ul>
-			</div>
-		</div>
-	</div>
-</div>
-    </body>
-</html>
+<div class="danhsach">
+    <div class="container">
+        <div class="item">
+            <div class="title">
+                <h2>Truyện Hot</h2>
+                <hr>
+            </div>
+            <div class="row">
+                <?php
+                $sql = "SELECT * FROM TRUYEN";
+                $result = $conn->query($sql);
+                if ($result && $result->num_rows > 0) {               
+                    while ($row = $result->fetch_assoc()) {
+                        echo "<div class=col-lg-2 col-md-3 col-sm-4>
+                                <div class=truyen>
+                                    <a href=detail.php?id=".$row['IDTRUYEN'].">
+                                    <div class=resize>
+                                        <img src=".$row['ANH']." alt=img2>
+                                    </div>
+                                    <div class=content> 
+                                        </a>
+                                        <h3><a href=detail.php?id=".$row['IDTRUYEN'].">".$row['TIEUDE']."</a></h3>
+                                    </div>
+                                </div>
+                            </div>";
+                    }
+                } else
+                    echo 'Không thành công. Lỗi' . $conn->error;
+                $conn->close();
+                ?>
+        </div>
+    </div>
+    </div>
+<?php
+    include 'footer.php';
+?>
+</body>

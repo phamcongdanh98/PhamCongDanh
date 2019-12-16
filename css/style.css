@@ -1,27 +1,30 @@
-.container{
-position: relative;
-text-rendering: optimizeLegibility;
-text-size-adjust: 100%;
-color: #4a4a4a;
-font-weight: 400;
-line-height: 1.5;
-font-family: Quicksand,sans-serif;
-font-size: 15px;
-box-sizing: inherit;
-padding-right: 15px;
-padding-left: 15px;
-position: relative;
-width: 1200px;
-max-width: 1200px!important;
-margin: 0 auto;
+*{
+	margin: 0px; padding:0px;
 }
+body{
+	background-color: #545b62;
+	background: url(../anh/anhtrang/backgr.jpg) ;
+	background-attachment: fixed;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	font-weight: bold;
+	color: white;
+	font-size: 15px;
+	font-family: 'quicksand',sans-serif;
+}
+
 .header{
 	padding-top: 17px;
     padding-bottom: 50px;
 	height: 38px;
 	background: #ffffff
 }
-.logo img{
+.logo img
+{
 	padding-top: 5px;
 	padding-left: 11px
 
@@ -36,14 +39,17 @@ margin: 0 auto;
 	right: 32px;
 
 }
-.header .form-control{
+.header .form-control
+{
 	border-radius: 40px;
 }
 .login .btn{
 	border: 1px solid black;
 	border-radius: 40px;
+	background: none;
 }
-.navbar{
+.navbar
+{
 background: #f18121;
 margin-bottom: 20px;
 }
@@ -57,3 +63,160 @@ nav{
     padding: 10px 15px;
     text-transform: uppercase;
 }
+.danhsach .item{
+	padding-top: 20px;
+    background: #E4A111;
+    margin-top: 30px;
+    border-radius: 15px;
+}
+.title {
+	text-align: center;
+    margin-bottom: 80px; 
+}
+.danhsach .item .truyen{
+	text-align: center;
+    margin-bottom: 45px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.title h2{
+	margin-left: -840px;
+}
+
+.danhsach .item .truyen img{
+	margin-bottom: -10px;
+    cursor: pointer;
+    z-index: 2;
+    border: 5px solid #fff;
+    border-radius: 10px;
+    object-fit: cover;
+    width: 100%;
+	height: 100%;
+}
+.title hr{
+	border: 2px solid black;
+}
+.danhsach .resize{
+	position: relative;
+	width: 150px;
+	height: 192px;
+	overflow: hidden;
+	transition: 0.5s;
+}
+.danhsach .resize:hover{
+	z-index: 1;
+	transform: scale(1.25);
+	box-shadow: 0 25px 40px black;
+}
+.danhsach .resize:hover .content{
+	visibility: hidden;
+}
+h3{
+	text-decoration: none;
+}
+a:hover{
+	color: #F50DC7;
+}
+
+.chitiet .item {
+    padding-top: 20px;
+    background: #E4A111;
+    margin-top: 30px;
+    display: flex;
+    border-radius: 20px;
+}
+.imgdetail img{
+    object-fit: cover;
+    width: 100%;
+	height: 100%;
+
+}
+.chitiet img{
+	border-radius: 10px;
+}
+.chitiet .resize{
+	margin-left: 20px;
+	margin-right: 20px;
+	position: relative;
+	width: 190px;
+	height: 247px;
+	overflow: hidden;
+	transition: 0.5s;
+}
+.doc_truyen{
+	background: #cf0e67;
+	color: #fff;
+	padding: 10px 10px;
+	margin-right: 20px;
+	border-radius: 20px;
+}
+
+.doc_truyen:hover{
+	background: #FF3333;
+	color: #fff;
+}
+.noidungtruyen{
+	background: #20c5ae;
+    width: 80%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: -157px;
+    padding: 5px 10px;
+    border: 8px solid #000;
+    border-radius: 20px;
+    width: 1000px;
+    font-size: 20px;
+}
+.chuongtruyen{
+	background: white;
+    width: 80%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: -157px;
+    padding: 5px 10px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    width: 1000px;
+    font-size: 20px;
+    overflow: auto;
+    height: 200px;
+}
+.box5{
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+    font-weight: 400;
+    line-height: 1.5;
+    font-family: Quicksand,sans-serif;
+    font-size: 90%!important;
+    box-sizing: inherit;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 3px rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.1);
+    color: #4a4a4a;
+    display: block;
+    padding: 1.25rem;
+    overflow-y: auto;
+    max-height: 300px;
+    margin-bottom: 20px;
+}
+.lazy{
+    width: 80%;
+    margin-left: 10%;
+}
+.chuongtruyen a{
+	color: black;
+	text-decoration: none;
+}
+.chuongtruyen a:hover{
+	color: red;
+}
+.chantrang p{
+	border: 3px solid black;
+	border-radius: 20px;
+	padding: 10px;
+	margin-top: 50px;
+	background: bisque
+
+}
+
+

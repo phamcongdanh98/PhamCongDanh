@@ -1,72 +1,102 @@
 <?php
-    include 'top.php';
-    
+	include 'top.php';
+	$sql = "SELECT * FROM truyen WHERE IDTRUYEN = '".$_GET['id']."'";
+	$sql1 = "SELECT * FROM chuong WHERE IDTRUYEN = '".$_GET['id']."'";
+	$sql2 = "SELECT * FROM chuong WHERE IDTRUYEN = '".$_GET['id']."' ORDER BY TENCHUONG asc LIMIT 1" ;
+	$sql3 = "SELECT * FROM chuong WHERE IDTRUYEN = '".$_GET['id']."' ORDER BY TENCHUONG desc LIMIT 1" ;
+                //run câu truy vấn
+    $result = $conn->query($sql);
+    $result1 = $conn->query($sql1);
+    $result2 = $conn->query($sql2);
+    $result3 = $conn->query($sql3);
+    if ($result && $result->num_rows > 0) {
+        // nếu có thì tiến hành lặp để in ra dữ liệu           
+        while ($row = $result->fetch_assoc()) {
 ?>
+<div class="container">
+	<div class="chitiet">
+		<div class="item">
+			<div class="imgdetail">
+				<div class=resize>
+				<?php
+					echo "<img src=".$row['ANH']." alt=img>";
+				?>
+			    </div>
+			</div>
+			<div class="info1">
+				<div class="name">
+					<?php
+						echo "<h1>".$row['TIEUDE']."</h1>";
+					?>
+				</div>
+				<div class="info">
+					<div class="row" style="padding: 5px 15px;">
+						<h5>Tac Giả : </h5>
+						<?php
+						echo "<h5><a href=#>".$row['TACGIA']."</a></h5>";
+						?>
+					</div>
+					<div class="row" style="padding: 5px 15px;">
+						<h5>Mô Tả : </h5>
+						<?php
+						echo "<h5><a href=#>".$row['MOTA']."</a></h5>";
+						?>
+					</div>
+					<div class="row" style="padding: 5px 15px;">
+						<h5>Thể Loại : </h5>
+						<h5><a href="#">Trinh Thám , Bạo Lực</a></h5>
+					</div>
+					<div class="row" style="padding: 5px 15px;">
+						<h5>Trang Thai: </h5>
+						<h5><a href="#">Chua Hoang thanh</a></h5>
+					</div>
+					<div class="row" style="padding: 5px 15px;">
+						<?php
+						if ($result2 && $result2->num_rows > 0) {
+				        // nếu có thì tiến hành lặp để in ra dữ liệu           
+				        	while ($row2 = $result2->fetch_assoc()) {
+							echo "<a href=view.php?chuong=".$row2['IDCHUONG']." class='btn doc_truyen'>Đọc Chương 1</a>";
+							}
+						}
+						?>
+						<?php
+						if ($result3 && $result3->num_rows > 0) {
+				        // nếu có thì tiến hành lặp để in ra dữ liệu           
+				        	while ($row3 = $result3->fetch_assoc()) {
+							echo "<a href=view.php?chuong=".$row3['IDCHUONG']." class='btn doc_truyen'>Đọc Chương Cuối</a>";
+							}
+						}
+						?>
+					</div>
+					<div class="noidungtruyen">
+						<h5 style="font-weight: bold;">Nội Dung:</h5>
+						<?php
+						echo "<p>".$row['NOIDUNG']."<p>";
 
-<div id="wrapper">
+					}
+				}
+						?>
+					</div>
+					<div class="chuongtruyen">
+						<h5 style="font-weight: bold;">Chương:</h5>
+						<hr>
 
-            <div class="container">
-                
-            <?php
-            $sql = "SELECT * FROM TRUYEN WHERE IDTRUYEN=".$_GET['id'];
-            
-            if ($result = mysqli_query($connect, $sql)) {
-                while ($row = mysqli_fetch_array($result)) {
-                    echo"
-                    <div id=news>
-                        <img src=".$row['ANH']." alt=Li's Product Image>
-                        <a href=view.php?chuong=1>
-                        <button class=btnDTruyen><span>Đọc Truyện</span></button>
-
-                        </a>
-                        <p id=khung>DanhPham</p>
-                    <p href=>".$row['NOIDUNG']."</p>
-                    <a href=>".$row['TIEUDE']."</a>
-                    </div>
-                    
-            <div class=block02>
-            <div class=title>
-                <h2 class=story-detail-title>Danh sách chương</h2>
-            </div>
-            <div class=box>
-                <div class=works-chapter-list>";
-                }
-            } else
-                //Hiện thông báo khi không thành công
-                echo 'Không thành công. Lỗi' . mysqli_error($connect);
-            //ngắt kết nối
-
-        $sql1 = "SELECT * FROM CHUONG WHERE IDTRUYEN =".$_GET['id'];
-        
-        if ($result1 = mysqli_query($connect, $sql1)) {
-            while ($row1 = mysqli_fetch_array($result1)) {
-                echo"
-                <div class=works-chapter-item row>
-                            <div class=col-md-10 col-sm-10 col-xs-8 >
-                                <a target=_blank href=view.php?chuong=".$row1['IDCHUONG']."&id=".$_GET['id'].">".$row1['TENCHUONG']."</a>
-                            </div>
-                </div>";
-            }
-        } else
-            //Hiện thông báo khi không thành công
-            echo 'Không thành công. Lỗi' . mysqli_error($connect);
-
-            echo"
-                                           
-                        </div>
-                                    </div>
-            </div>
-            <div class=block01>
-            <div class=noidung style=height: 222.2px;>";
-            mysqli_close($connect);
-            ?>
-
-        </div>
-                   
-                </div>
-            </div>
-        </div>
-            </div>
-        </div>
-    </body>
-</html>
+						<?php
+							if ($result1 && $result1->num_rows > 0) {
+						        // nếu có thì tiến hành lặp để in ra dữ liệu           
+						        while ($row1 = $result1->fetch_assoc()) {
+						        	echo "<p><a href=view.php?chuong=".$row1['IDCHUONG'].">".$row1['TENCHUONG']."</a></p>";
+						        	echo "<hr>";
+						        }
+						    }
+						?>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<?php
+    include 'footer.php';
+?>
+</body>
