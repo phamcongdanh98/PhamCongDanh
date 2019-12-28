@@ -23,7 +23,7 @@
 
 <h2> NHIỆM VỤ ĐỀ TÀI</h2>
 
-- Website được lập trình bằng ngôn ngữ PHP và dùng MySQL để quan trị cơ sở dữ liệu với các chức năng thông dụng như đăng nhập, xem truyện, qua chương..
+- Website được lập trình bằng ngôn ngữ PHP và dùng MySQL để quan trị cơ sở dữ liệu với các chức năng thông dụng như đăng nhập, xem truyện, qua chương ...
 
 <h2> NỘI DUNG ĐỀ TÀI</h2>
 
