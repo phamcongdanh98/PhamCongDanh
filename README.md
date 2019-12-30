@@ -28,17 +28,17 @@
 <h2> NỘI DUNG ĐỀ TÀI</h2>
 
 Đồ án được xây dựng gồm 3 phần :
-- Lập mô hình nghiệp vụ: xây dựng biểu đồ phân rã chức năng.
-- Cơ sở dữ liệu: sơ đồ khối hoạt động, sơ đồ thực thể liên kết, mô tả các bảng quan hệ.
-- Triển khai chương trình: thiết kế giao diện cho website.
+- Lập mô hình nghiệp vụ: xây dựng biểu đồ phân rã chức năng
+- Cơ sở dữ liệu: sơ đồ khối hoạt động, sơ đồ thực thể liên kết, mô tả các bảng quan hệ
+- Triển khai chương trình: thiết kế giao diện cho website
 
 <h2> HƯỚNG PHÁT TRIỂN THÊM CHO ỨNG DỤNG</h2>
 
-- Thêm một số chức năng cho để đáp ứng với yêu cầu của người dùng.
-- Cải thiện giao diện đẹp hơn phù hợp với người dùng.
-- Nâng cao bảo mật dữ liệu và thông tin người dùng. 
+- Thêm một số chức năng cho để đáp ứng với yêu cầu của người dùng
+- Cải thiện giao diện đẹp hơn phù hợp với người dùng
+- Nâng cao bảo mật dữ liệu và thông tin người dùng
 
 <h2> TÁC GIẢ</h2>
 
 - Phạm Công Danh
-- Trần Vĩnh Khang
+- Trần Vĩnh Khang.
