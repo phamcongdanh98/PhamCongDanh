@@ -64,7 +64,7 @@
    * USERNAM: tên đăng nhập
    * PASSWORD: mật khẩu
    
-![Atom](csdl)
+![Atom](https://github.com/phamcongdanh98/PhamCongDanh/blob/master/anhreadme/database.png)
 <h2> HƯỚNG DÃN CÀI ĐẶT</h2>
 
  ## Bước 1:
