@@ -35,6 +35,72 @@
 
 - Giao diện:Sử dụng ngôn ngữ html và các thuộc tính css.
 - Giao tiếp đến cơ sở dữ liệu : sử dụng ngôn ngữ php.
+<h2> THIẾT KẾ CƠ SỞ DỮ LIỆU</h2>
+
+ * Bảng truyen:
+   * IDTRUYEN: id của truyện.
+   * TIEUDE: tên của truyện.
+   * TACGIA: tác giả của truyện.
+   * IDLOAI: id của loại truyện.
+   * MOTA: trạng thái hoàn thành hay chưa hoàn thành.
+   * NOIDUNG: nội dung chính của truyện.
+   * ANH: ảnh bìa chính của truyện.
+   
+ * Bảng loaitruyen : 
+   * IDLOAI: id của loại truyện.
+   * TENLOAI: tên của thể loại truyện.
+   
+ * Bảng chuong :
+   * IDCHUONG: id của chương truyện.
+   * IDTRUYEN: id của truyện.
+   * TENCHUONG: tên của chương truyện.
+  
+ * Bảng anh :
+   * IDANH: id của ảnh từng trang truyện.
+   * IDCHUONG: id của chương truyện.
+   * ANH: link của ảnh.
+    
+ * Bảng dangnhap :
+   * USERNAM: tên đăng nhập
+   * PASSWORD: mật khẩu
+   
+![Atom](csdl)
+<h2> HƯỚNG DÃN CÀI ĐẶT</h2>
+
+ ## Bước 1:
+ 
+* Mở xampp.
+
+![Atom](https://github.com/phamcongdanh98/PhamCongDanh/blob/master/anhreadme/xampp.png)
+
+## Bước 2:
+
+* Coppy đưởng dẫn của github
+
+![Atom](https://github.com/phamcongdanh98/PhamCongDanh/blob/master/anhreadme/gitclone.png)
+
+* Clone project về bằng câu lệnh git clone "đường dẫn đã copy"
+
+![Atom](https://github.com/phamcongdanh98/PhamCongDanh/blob/master/anhreadme/clone.png)
+
+## Bước 3:
+
+* Mở trình duyệt và truy cập theo đường dẫn localhost/tenthumuc/index.php"
+
+<h2> Hình Ảnh DEMO</h2>
+
+* Trang chủ:
+
+![Atom](https://github.com/phamcongdanh98/PhamCongDanh/blob/master/anhreadme/trangchu.png)
+
+* Trang chi tiết của truyện vừa bấm vào:
+
+![Atom](https://github.com/phamcongdanh98/PhamCongDanh/blob/master/anhreadme/trangchitiet.png)
+
+* Trang đọc truyện:
+
+![Atom](https://github.com/phamcongdanh98/PhamCongDanh/blob/master/anhreadme/trangdoc.png)
+
 <h2> HƯỚNG PHÁT TRIỂN THÊM CHO ỨNG DỤNG</h2>
 
 - Thêm một số chức năng cho để đáp ứng với yêu cầu của người dùng.
