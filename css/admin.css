@@ -253,3 +253,6 @@ input[type=button]{
 button:hover{
 	background: #0033ff;
 }
+input[type=button]:hover{
+			background: #0033ff;
+}

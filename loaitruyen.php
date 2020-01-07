@@ -5,7 +5,7 @@
     <div class="container">
         <div class="item">
             <div class="title">
-                <h2>Truyện Hot</h2>
+                <h2>Truyện đã tìm</h2>
                 <hr>
             </div>
             <div class="row">
@@ -28,7 +28,7 @@
                             </div>";
                     }
                 } else
-                    echo 'Không thành công. Lỗi' . $conn->error;
+                    echo '<h3 class=datim>không có truyện đã tìm</h3>' . $conn->error;
                 $conn->close();
                 ?>
         </div>

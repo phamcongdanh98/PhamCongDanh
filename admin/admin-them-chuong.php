@@ -13,9 +13,7 @@
 	<meta charset="utf-8">
 	<title></title>
 	<link rel="stylesheet" href="../css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
 	<link rel="stylesheet" href="../css/admin.css">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates&display=swap" rel="stylesheet">
 	<script src="../js/jquery-1.12.0.min.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
@@ -30,7 +28,7 @@
 					data: {query:query},
 					success:function(d){
 						alert(d);
-						// window.location="admin-chitiet.php?id="+id;
+						window.location="admin-chitiet.php?id="+id;
 					},
 					error:function(){
 						alert("Bị lỗi");
@@ -48,8 +46,6 @@
 			margin-top: 30px;
 			margin-left: 9.5%;
 			border-radius: 15px 15px;
-			-moz-border-radius: 15px 15px; /*Firefox*/
-			-webkit-border-radius: 15px 15px;  /*Chrome và Safary*/
 		}
 		button:hover{
 			background: #0033ff;
@@ -60,10 +56,10 @@
 	<div class="vertical-menu">
 		<h5>Menu</h5>
 		<ul>
-			<li><a style="color: #fff;" href="admin-top.php" class="active">Truyện</a></li>
+			<li><a style="" href="admin-top.php" class="active">Truyện</a></li>
 		    <li><a href="admin-loaitruyen.php" class="active">Thể Loại Truyện</a></li>
 		    <li><a href="admin-taikhoan.php" class="active">Tài Khoản</a></li>
-		    <li><a href="../index.php" class="active">Đăng Xuất</a></li>
+		    <li><a href="logout.php" class="active">Đăng Xuất</a></li>
 		    <li><a href="../index.php" class="active">Quay về trang index</a></li>
 		</ul>
 	</div>

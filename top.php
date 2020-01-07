@@ -2,22 +2,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-    // khởi tạo kết nối
-$connect = mysqli_connect('localhost', 'root', '', 'webtruyen');
-//Kiểm tra kết nối
-if (!$connect) {
-    die('kết nối không thành công ' . mysqli_connect_error());
-}
-    $sql = "SELECT * FROM loaitruyen";
-    $result = $connect->query($sql);
-?>
+    session_start();
+    $connect = mysqli_connect('localhost', 'root', '', 'webtruyen');
+    //Kiểm tra kết nối
+    if (!$connect) {
+        die('kết nối không thành công ' . mysqli_connect_error());
+    }
+        $sql = "SELECT * FROM loaitruyen";
+        $result = $connect->query($sql);
+    ?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Truyện Tranh</title>
+    <title>Truyện Online</title>
 </head>
 <body>
     <div class="header">       
@@ -37,7 +37,20 @@ if (!$connect) {
                     </form>
                 </div>
                 <div class="col-sm-3 login">
-                <a href="#" class="item control btn btn-default mt-15 mb-15">Đăng Nhập/Đăng ký</a>
+                <?php 
+                if(isset($_SESSION['id']))
+                {
+                 ?>
+                 <a href="#"><?php echo $_SESSION['id']; ?></a>
+                 <a href="./admin/logout.php">/Đăng xuất</a>
+                <?php
+                    }
+                    else{
+                ?>
+                <a href="./admin/login.php">Đăng nhập</a>
+                <?php
+                }
+                ?>
                 </div>
             </div>
         </div> 
@@ -46,9 +59,9 @@ if (!$connect) {
     <div class="container">
             <nav>
                 <ul>
-                    <li><a href="#">Trang Chủ</a></li>
-                    <li><a href="#">Truyện Mới</a></li>
-                    <li><a href="#">Thể Loại</a>
+                    <li><a href="index.php">Trang Chủ</a></li>
+                    <li><a href="truyenmoi.php">Truyện Mới</a></li>
+                    <li><a href="index.php">Thể Loại</a>
                     <ul>
                         <div class="row">
                         <?php
@@ -66,7 +79,7 @@ if (!$connect) {
                        </div>
                     </ul>
                     </li>
-                    <li><a href="#">Thông Tin</a></li>
+                    <li><a href="admin/admin-top.php">Trang Admin</a></li>
 
                 </ul>
             </nav>

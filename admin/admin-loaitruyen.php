@@ -1,15 +1,19 @@
 <?php
+	session_start();
 	$conn = new mysqli('localhost','root','','webtruyen');
     mysqli_query($conn,'SET NAMES UTF8');
     $sql = "SELECT * FROM loaitruyen";
     $result = $conn->query($sql);
+    if($_SESSION['id'] != 'admin')
+    {
+    	header('Location: http://localhost/truyen2/admin/login.php');
+    }
 ?>
 <head>
 	<meta charset="utf-8">
-	<title>Thế giới truyện</title>
+	<title>Truyện Online</title>
 	<link rel="stylesheet" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" href="../css/admin.css">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates&display=swap" rel="stylesheet">
 	<style type="text/css">
 		th{
 			padding: 40px 80px;
@@ -24,8 +28,6 @@
 			margin-top: 50px;
 			margin-left: 12.5%;
 			border-radius: 15px 15px;
-			-moz-border-radius: 15px 15px; /*Firefox*/
-			-webkit-border-radius: 15px 15px;  /*Chrome và Safary*/
 		}
 	</style>
 </head>
@@ -33,10 +35,10 @@
 	<div class="vertical-menu">
 		<h5>Menu</h5>
 		<ul>
-			<li><a style="color: #fff;" href="admin-top.php" class="active">Truyện</a></li>
+			<li><a style="" href="admin-top.php" class="active">Truyện</a></li>
 		    <li><a href="admin-loaitruyen.php" class="active">Thể Loại Truyện</a></li>
 		    <li><a href="admin-taikhoan.php" class="active">Tài Khoản</a></li>
-		    <li><a href="../index.php" class="active">Đăng Xuất</a></li>
+		    <li><a href="logout.php" class="active">Đăng Xuất</a></li>
 		    <li><a href="../index.php" class="active">Quay về trang index</a></li>
 		</ul>
 	</div>
@@ -48,7 +50,6 @@
 					<th>Mã Thể Loại</th>
 					<th>Tên Thể Loại</th>
 					<th>Edit</th>
-					<th>Delete</th>
 				</tr>
 				<?php
 	            if ($result && $result->num_rows > 0){
@@ -57,8 +58,7 @@
 	          	<tr>
 	          		<td><?php echo $row['IDLOAI']; ?></td>
 	          		<td><?php echo $row['TENLOAI']; ?></td>
-	          		<td><a href="admin-edit-loaitruyen.php?id=<?php echo $row['IDLOAI']; ?>"><img src="./Image/pencil-edit-button.png" /></a></td>
-	          		<td><a href="#"><img src="./Image/rubbish-bin.png" /></a></td>
+	          		<td><a href="admin-sua-loaitruyen.php?id=<?php echo $row['IDLOAI']; ?>">Sửa</a></td>
 	          	</tr>
 	          	<?php
 			          	}

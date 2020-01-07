@@ -4,7 +4,7 @@
 	mysqli_query($conn,'SET NAMES UTF8');
 	if(isset($_POST['btn']))
 	{
-		if($_POST['id'] == 'admin' && $_POST['pass'] == 'admin')
+		if($_POST['id'] == 'admin' && $_POST['pass'] == '1')
 		{
 			$_SESSION['id'] = $_POST['id'];
 			header('Location: http://localhost/truyen2/admin/admin-top.php');	
@@ -25,7 +25,7 @@
 			}
 			else
 			{
-				echo "Sai tên đăng nhập hoặc mật khẩu";
+				echo 'Sai tên đăng nhập hoặc mật khẩu';
 				header('Location: http://localhost/truyen2/admin/login.php');
 			}
 		}

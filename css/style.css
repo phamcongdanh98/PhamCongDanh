@@ -144,7 +144,6 @@ h3{
 .noidungtruyen{
 	background: #20c5ae;
     width: 80%;
-    margin-top: 50px;
     margin-bottom: 50px;
     margin-left: -157px;
     padding: 5px 10px;
@@ -152,6 +151,7 @@ h3{
     border-radius: 20px;
     width: 1000px;
     font-size: 20px;
+    margin-top: 90px;
 }
 .chuongtruyen{
 	background: white;
@@ -184,6 +184,8 @@ h3{
     overflow-y: auto;
     max-height: 300px;
     margin-bottom: 20px;
+    margin-left: 113px;
+    margin-right: 105px;
 }
 .lazy{
     width: 80%;
@@ -263,6 +265,18 @@ nav ul li ul li:hover{
 nav ul ul li a{
 	font-size: 10px;
 }
-
+.login a:hover{
+	color: red;
+}
+.detail-title {
+	font-size: 21px;
+}
+.detail-title a:hover{
+	color: red;
+	font-size: 21px;
+}
+.datim{
+	margin-left: 50px;
+}
 
 

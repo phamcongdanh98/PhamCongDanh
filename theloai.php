@@ -5,12 +5,12 @@
     <div class="container">
         <div class="item">
             <div class="title">
-                <h2>Truyen da tim</h2>
+                <h2>Truyện đã tìm</h2>
                 <hr>
             </div>
             <div class="row">
                 <?php
-                $sql = "SELECT * FROM truyen WHERE TIEUDE like '%".$_GET['search']."%'";
+                $sql = "SELECT * FROM truyen ";
                 $result = $conn->query($sql);
                 if ($result && $result->num_rows > 0) {               
                     while ($row = $result->fetch_assoc()) {
@@ -28,7 +28,7 @@
                             </div>";
                     }
                 } else
-                    echo 'Không thành công. Lỗi' . $conn->error;
+                    echo '<h3 class=datim>không có truyện đã tìm</h3>' . $conn->error;
                 $conn->close();
                 ?>
         </div>

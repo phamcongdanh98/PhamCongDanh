@@ -12,6 +12,10 @@
     if ($result && $result->num_rows > 0) {
         // nếu có thì tiến hành lặp để in ra dữ liệu           
         while ($row = $result->fetch_assoc()) {
+        	$sql4 = "select * from loaitruyen where IDLOAI='".$row['IDLOAI']."'";
+	             	$result4 = $conn->query($sql4);
+					if ($result4 && $result4->num_rows > 0){
+		             	while($row4 = $result4->fetch_assoc()){
 ?>
 <div class="container">
 	<div class="chitiet">
@@ -31,24 +35,34 @@
 				</div>
 				<div class="info">
 					<div class="row" style="padding: 5px 15px;">
-						<h5>Tac Giả : </h5>
+						<h5>Tac Giả :   </h5>
 						<?php
-						echo "<h5><a href=#>".$row['TACGIA']."</a></h5>";
+						echo "<h5>".$row['TACGIA']."</h5>";
 						?>
 					</div>
 					<div class="row" style="padding: 5px 15px;">
-						<h5>Mô Tả : </h5>
 						<?php
-						echo "<h5><a href=#>".$row['MOTA']."</a></h5>";
+							if($row['MOTA']=='Hoàn thành')
+							{
+
+						?>
+						<h5>Tình Trạng : </h5>
+						<h5><a href="tinhtrangtruyen.php?tinhtrang=1"><?php echo $row['MOTA']; ?></a></h5>
+						<?php
+							}
+							else{
+						?>
+						<h5>Tình Trạng : </h5>
+						<h5><a href="tinhtrangtruyen.php?tinhtrang=0"><?php echo $row['MOTA']; ?></a></h5>
+						<?php
+							}
 						?>
 					</div>
 					<div class="row" style="padding: 5px 15px;">
-						<h5>Thể Loại : </h5>
-						<h5><a href="#">Trinh Thám , Bạo Lực</a></h5>
-					</div>
-					<div class="row" style="padding: 5px 15px;">
-						<h5>Trang Thai: </h5>
-						<h5><a href="#">Chua Hoang thanh</a></h5>
+						<h5>Thể Loại :   </h5>
+						<?php
+							echo "<h5><a href=loaitruyen.php?id=".$row['IDLOAI'].">".$row4['TENLOAI']."</h5>";
+						?>
 					</div>
 					<div class="row" style="padding: 5px 15px;">
 						<?php
@@ -88,6 +102,8 @@
 						        	echo "<p><a href=view.php?chuong=".$row1['IDCHUONG'].">".$row1['TENCHUONG']."</a></p>";
 						        	echo "<hr>";
 						        }
+						    }
+						}
 						    }
 						?>
 					</div>

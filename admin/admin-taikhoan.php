@@ -11,7 +11,7 @@
 ?>
 <head>
 	<meta charset="utf-8">
-	<title></title>
+	<title>Truyện Online</title>
 	<link rel="stylesheet" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" href="../css/admin.css">
 	<script src="../js/jquery-1.12.0.min.js"></script>
@@ -29,8 +29,6 @@
 			margin-top: 50px;
 			margin-left: 12.5%;
 			border-radius: 15px 15px;
-			-moz-border-radius: 15px 15px; /*Firefox*/
-			-webkit-border-radius: 15px 15px;  /*Chrome và Safary*/
 		}
 	</style>
 </head>
@@ -38,16 +36,16 @@
 	<div class="vertical-menu">
 		<h5>Menu</h5>
 		<ul>
-			<li><a style="color: #fff;" href="admin-top.php" class="active">Truyện</a></li>
+			<li><a style="" href="admin-top.php" class="active">Truyện</a></li>
 		    <li><a href="admin-loaitruyen.php" class="active">Thể Loại Truyện</a></li>
 		    <li><a href="admin-taikhoan.php" class="active">Tài Khoản</a></li>
-		    <li><a href="../index.php" class="active">Đăng Xuất</a></li>
+		    <li><a href="logout.php" class="active">Đăng Xuất</a></li>
 		    <li><a href="../index.php" class="active">Quay về trang index</a></li>
 		</ul>
 	</div>
 	<div class="main">
 		<h2>Danh sách tài khoản</h2>
-		<a href="admin-them-user.php"><button>Thêm tài khoản mới</button> </a>
+		<a href="admin-them-taikhoan.php"><button>Thêm tài khoản mới</button> </a>
 			<table class="value">
 				<tr>
 					<th>Tên Đăng Nhập</th>
@@ -62,8 +60,8 @@
 	          	<tr>
 	          		<td><?php echo $row['USERNAM']; ?></td>
 	          		<td><?php echo $row['PASSWORD']; ?></td>
-	          		<td><a href="admin-edit-user-pass.php?id=<?php echo $row['USERNAM']; ?>"><img src="./Image/pencil-edit-button.png" /></a></td>
-	          		<td><a href="admin-xoa-user.php?id=<?php echo $row['USERNAM']; ?>"><img src="./Image/rubbish-bin.png" /></a></td>
+	          		<td><a href="admin-sua-taikhoan-pass.php?id=<?php echo $row['USERNAM']; ?>">Đổi Pass</a></td>
+	          		<td><a href="admin-xoa-taikhoan.php?id=<?php echo $row['USERNAM']; ?>">Xóa TK</a></td>
 	          	</tr>
 	          	<?php
 			          	}

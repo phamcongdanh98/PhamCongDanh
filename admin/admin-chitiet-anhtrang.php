@@ -1,12 +1,17 @@
 <?php
+	session_start();
 	$conn = new mysqli('localhost','root','','webtruyen');
     mysqli_query($conn,'SET NAMES UTF8');
     $sql = "SELECT * FROM ANH WHERE IDCHUONG ='".$_GET['id']."'";
     $result = $conn->query($sql);
+    if($_SESSION['id'] != 'admin')
+    {
+    	header('Location: http://localhost/truyen2/admin/login.php');
+    }
 ?>
 <head>
 	<meta charset="utf-8">
-	<title>Thế giới phim truyện</title>
+	<title>Truyện Online</title>
 	<link rel="stylesheet" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
 	<link rel="stylesheet" href="../css/admin.css">
@@ -15,10 +20,10 @@
 	<div class="vertical-menu">
 		<h5>Menu</h5>
 		<ul>
-			<li><a style="color: #fff;" href="admin-top.php" class="active">Truyện</a></li>
+			<li><a style="" href="admin-top.php" class="active">Truyện</a></li>
 		    <li><a href="admin-loaitruyen.php" class="active">Thể Loại Truyện</a></li>
 		    <li><a href="admin-taikhoan.php" class="active">Tài Khoản</a></li>
-		    <li><a href="../index.php" class="active">Đăng Xuất</a></li>
+		    <li><a href="logout.php" class="active">Đăng Xuất</a></li>
 		    <li><a href="../index.php" class="active">Quay về trang index</a></li>
 		</ul>
 	</div>

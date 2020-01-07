@@ -5,10 +5,7 @@
 	if(!$conn){
         die("Kết nối thất bại". mysqli_connect_error($conn));
 	}
-	$sql = $_POST['query'];
+	$sql = "insert into dangnhap values('".$_POST['id']."','".$_POST['pass']."')";
 	$result = $conn->query($sql);
-	if(!$result)
-		echo "Bị Lỗi";
-	else
-		echo "Đã chỉnh sửa";
+	header('location: http://localhost/truyen2/admin/login.php');
 ?>

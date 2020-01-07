@@ -11,24 +11,23 @@
 ?>
 <head>
 	<meta charset="utf-8">
-	<title></title>
+	<title>Truyện Online</title>
 	<link rel="stylesheet" href="../css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
 	<link rel="stylesheet" href="../css/admin.css">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates&display=swap" rel="stylesheet">
 	<script src="../js/jquery-1.12.0.min.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
 			$('#btn').click(function(){
 				console.log("thành công");
 				var idchuong = $('#id').val();
+				var idtruyen = $('#idtruyen').val();
 				$.ajax({
 					url: 'admin-xoa.php',
 					type: 'POST',
 					data: {idchuong:idchuong},
 					success:function(d){
 						alert(d);
-						window.location="admin-top.php";
+						window.location="admin-chitiet.php?id="+idtruyen;
 					},
 					error:function(){
 						alert("Bị lỗi");
@@ -42,10 +41,10 @@
 <div class="vertical-menu">
 		<h5>Menu</h5>
 		<ul>
-			<li><a style="color: #fff;" href="admin-top.php" class="active">Truyện</a></li>
+			<li><a style="" href="admin-top.php" class="active">Truyện</a></li>
 		    <li><a href="admin-loaitruyen.php" class="active">Thể Loại Truyện</a></li>
 		    <li><a href="admin-taikhoan.php" class="active">Tài Khoản</a></li>
-		    <li><a href="../index.php" class="active">Đăng Xuất</a></li>
+		    <li><a href="logout.php" class="active">Đăng Xuất</a></li>
 		    <li><a href="../index.php" class="active">Quay về trang index</a></li>
 		</ul>
 	</div>
@@ -67,6 +66,10 @@
 				<input id="tenchuong" style="float: left; margin-right: 80px;" type="text" value="<?php echo $row['TENCHUONG']; ?>" readonly>
 				<h6 style="float: left; margin-right:10px">Tên Truyện</h6>
 				<input id="tentruyen" style="float: left; margin-right: 80px;" type="text" value="<?php echo $row1['TIEUDE']; ?>" readonly>
+			</div>
+			<div class="img">
+				<h6 style="float: left; margin-right: 10px;">Truyện</h6>
+				<input id="idtruyen" style="float: left; margin-right: 80px;" type="text" value="<?php echo $row1['IDTRUYEN']; ?>" readonly>
 			</div>
 			<?php
 				}

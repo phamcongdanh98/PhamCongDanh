@@ -10,7 +10,12 @@
             </div>
             <div class="row">
                 <?php
-                $sql = "SELECT * FROM TRUYEN LIMIT 12";
+                if($_GET['tinhtrang']==0){
+                    $sql = "SELECT * FROM truyen WHERE MOTA = 'Chưa hoàn thành' ";
+                }
+                if($_GET['tinhtrang']==1){
+                    $sql = "SELECT * FROM truyen WHERE MOTA = 'Hoàn thành' ";
+                }
                 $result = $conn->query($sql);
                 if ($result && $result->num_rows > 0) {               
                     while ($row = $result->fetch_assoc()) {

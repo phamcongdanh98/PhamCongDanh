@@ -10,7 +10,7 @@
             $sql1 = "SELECT * FROM CHUONG,TRUYEN WHERE IDCHUONG=".$_GET['chuong']." AND CHUONG.IDTRUYEN=TRUYEN.IDTRUYEN";
             if ($result1 = mysqli_query($connect, $sql1)) {
                 while ($row1 = mysqli_fetch_array($result1)) {
-                    echo"<a href=#>".$row1['TIEUDE']."</a> 
+                    echo"<a href=detail.php?id=".$row1['IDTRUYEN'].">".$row1['TIEUDE']."</a> 
                     ".$row1['TENCHUONG'];
                 }
             } else

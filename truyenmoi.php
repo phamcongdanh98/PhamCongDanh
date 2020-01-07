@@ -5,12 +5,12 @@
     <div class="container">
         <div class="item">
             <div class="title">
-                <h2>Truyện Hot</h2>
+                <h2>Truyện Mới</h2>
                 <hr>
             </div>
             <div class="row">
                 <?php
-                $sql = "SELECT * FROM TRUYEN LIMIT 12";
+                $sql = "SELECT * FROM TRUYEN ORDER BY IDTRUYEN desc LIMIT 6";
                 $result = $conn->query($sql);
                 if ($result && $result->num_rows > 0) {               
                     while ($row = $result->fetch_assoc()) {

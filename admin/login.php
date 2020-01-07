@@ -14,7 +14,7 @@
 					type: 'POST',
 					cache: false,
 					success:function(d){
-							alert(d);
+							// alert();
 					},
 					error:function(){
 						alert("Bị lỗi");
@@ -34,7 +34,7 @@
 					<input class="btn" type="submit" name="btn" value="Đăng Nhập">
 				</div>
 				<div class="create">
-					<a class="txt" href="">Tạo tài khoản</a>
+					<a class="txt" href="dangky.php">Tạo tài khoản</a>
 				</div>
 			</form>
 		</div>

@@ -5,7 +5,7 @@
     <div class="container">
         <div class="item">
             <div class="title">
-                <h2>Truyen da tim</h2>
+                <h2>Truyen Đã Tìm</h2>
                 <hr>
             </div>
             <div class="row">
