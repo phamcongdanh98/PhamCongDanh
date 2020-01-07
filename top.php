@@ -1,3 +1,6 @@
+
+<!DOCTYPE html>
+<html lang="en">
 <?php
     // khởi tạo kết nối
 $connect = mysqli_connect('localhost', 'root', '', 'webtruyen');
@@ -5,9 +8,9 @@ $connect = mysqli_connect('localhost', 'root', '', 'webtruyen');
 if (!$connect) {
     die('kết nối không thành công ' . mysqli_connect_error());
 }
+    $sql = "SELECT * FROM loaitruyen";
+    $result = $connect->query($sql);
 ?>
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,9 +29,9 @@ if (!$connect) {
                     </div>
                 </div>
                 <div class="col-sm-7">
-                    <form method="get" action="tim-truyen/">
+                    <form id="tim" method="get" action="search.php">
                         <div class="input-group">
-                            <input type="text" name="keyword" class="form-control" placeholder="Tìm truyện...">
+                            <input type="seach" name="search" class="form-control" placeholder="Tìm truyện...">
                         </div>
                         <button></button>
                     </form>
@@ -39,33 +42,36 @@ if (!$connect) {
             </div>
         </div> 
     </div>
-    <nav class="navbar navbar-expand-lg navbar-light ">
-        <div class="container" id="danh">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                <li class="nav-item ">
-                    <a class="nav-link" href="#">Trang Chủ</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Thể Loại</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Truyện Tranh</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Chủ Đề</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Thông Tin</a>
-                </li>
-            </div>
-               </ul>
-           </div>
-        </div>
-</nav>
+    <div class="menutop">
+    <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#">Trang Chủ</a></li>
+                    <li><a href="#">Truyện Mới</a></li>
+                    <li><a href="#">Thể Loại</a>
+                    <ul>
+                        <div class="row">
+                        <?php
+                            if ($result && $result->num_rows > 0) {
+                            // nếu có thì tiến hành lặp để in ra dữ liệu           
+                                while ($row = $result->fetch_assoc()) { 
+                                    echo "<div class='col-md-3'>
+                                            <li style='padding: 8px 15px'>
+                                                <a href=loaitruyen.php?id=".$row['IDLOAI'].">".$row['TENLOAI']."</a>
+                                            </li>
+                                        </div>";
+                                }
+                            }
+                        ?>
+                       </div>
+                    </ul>
+                    </li>
+                    <li><a href="#">Thông Tin</a></li>
+
+                </ul>
+            </nav>
+    </div>
+    </div>
 <?php
         $conn = new mysqli('localhost','root','','webtruyen');
         mysqli_query($conn,'SET NAMES UTF8');

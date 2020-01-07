@@ -3,7 +3,7 @@
 }
 body{
 	background-color: #545b62;
-	background: url(../anh/anhtrang/backgr.jpg) ;
+	background: url(../anh/backgr.jpg) ;
 	background-attachment: fixed;
 }
 li{
@@ -12,11 +12,14 @@ li{
 a{
 	text-decoration: none;
 	font-weight: bold;
-	color: white;
+	color: black;
 	font-size: 15px;
 	font-family: 'quicksand',sans-serif;
 }
-
+a:hover{
+	text-decoration: none;
+	color: white;
+}
 .header{
 	padding-top: 17px;
     padding-bottom: 50px;
@@ -48,21 +51,7 @@ a{
 	border-radius: 40px;
 	background: none;
 }
-.navbar
-{
-background: #f18121;
-margin-bottom: 20px;
-}
-nav{
-	
-	height: 54px;
-}
-.navbar-light .navbar-nav .nav-link {
-    color: #ffffff;
-    font: 15px Quicksand;
-    padding: 10px 15px;
-    text-transform: uppercase;
-}
+
 .danhsach .item{
 	padding-top: 20px;
     background: #E4A111;
@@ -113,9 +102,6 @@ nav{
 }
 h3{
 	text-decoration: none;
-}
-a:hover{
-	color: #F50DC7;
 }
 
 .chitiet .item {
@@ -202,6 +188,7 @@ a:hover{
 .lazy{
     width: 80%;
     margin-left: 10%;
+    margin-bottom: 30px;
 }
 .chuongtruyen a{
 	color: black;
@@ -218,5 +205,64 @@ a:hover{
 	background: bisque
 
 }
+.menutop{
+	margin: auto;
+	background: orange;
+}
+nav ul li a{
+	text-decoration: none;
+
+}
+nav ul{
+	list-style: none;
+}
+nav ul li{
+	position: relative;
+    font: 15px Quicksand;
+    padding: 10px 15px;
+    text-transform: uppercase;
+}
+nav ul li:hover{
+	background-color: black;
+}
+nav ul li:hover a{
+	color: white;
+}
+nav > ul > li{
+	display: inline-block;
+	height: 54px;
+}
+nav>ul>li>a{
+	display: block;
+	line-height: 40px;
+	padding: 0 10px;
+}
+nav ul ul {
+	width: 700px;
+	background-color: black;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 100;
+}
+nav ul ul li{
+	line-height: 30px;
+	padding: 0 15px;
+	list-style: none;
+	font-size: 10px;
+}
+nav ul li:hover > ul{
+	opacity: 1;
+	visibility: visible;
+}
+nav ul li ul li:hover{
+	background-color: red;
+}
+nav ul ul li a{
+	font-size: 10px;
+}
+
 
 
