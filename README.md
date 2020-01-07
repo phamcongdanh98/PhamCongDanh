@@ -33,7 +33,7 @@
 - Triển khai chương trình: thiết kế giao diện cho website.
 <h2> CÔNG CỰ PHÁT TRIỂN</h2>
 - Giao diện : sử dụng ngôn ngữ html và các thuộc tính css.
-- Giao tiếp đến cơ sở dữ liệu : sử dụng ngôn ngữ php.
+- Giao tiếp đến cơ sở dữ liệu: sử dụng ngôn ngữ php.
 <h2> HƯỚNG PHÁT TRIỂN THÊM CHO ỨNG DỤNG</h2>
 
 - Thêm một số chức năng cho để đáp ứng với yêu cầu của người dùng.
